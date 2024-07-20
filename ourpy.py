@@ -3,7 +3,7 @@ import socket, os, time, requests, time, secrets, random, sys, json, platform
 class config:
     VERSION = "1.0.0"
     AUTHOR = "harimtim"
-    DOCUMENTION = "https://github.com/harimtim/EZPY"
+    DOCUMENTION = "https://github.com/harimtim/OurPy"
 
 def showconfig() -> str:
     try:

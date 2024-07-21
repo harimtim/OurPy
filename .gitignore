@@ -1,5 +1,5 @@
 /ourpy
 /dist
 /ourpy.egg-info
-*.toml
-*.txt
+pyproject.toml
+requirements.txt

@@ -15,7 +15,7 @@ OurPy ist ein Python-Modul, das verschiedene Dienstprogramme für Konfigurations
 
 ## Installation
 
-Klone das Repository auf deinen lokalen Rechner:
+Install the PyPi module locally on your PC:
 
 ```py
 pip install ourpy

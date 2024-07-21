@@ -1,0 +1,33 @@
+[project]
+name = "ourpy"
+description = "OurPy the beginner friendly Python module"
+requires-python = ">=3"
+license = {text = "MIT"}
+
+readme = "README.md"
+keywords = ["ourpy", "beginner", "easy"]
+authors = [
+    { name = "harimtim" }
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+]
+dynamic = ["dependencies", "version"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = "requirements.txt"}
+version = {attr = "ourpy.__version__"}
+
+[tool.setuptools]
+packages = ["ourpy"] 
+
+[project.urls]
+GitHub = "https://github.com/harimtim/OurPy"
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"

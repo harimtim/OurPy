@@ -1,37 +1,22 @@
-# OurPy - the beginner friendly Python module
-OurPy is the best module when you'd like to keep your Python Code simple and short.
+# OurPy
 
-## Usage
+The best module when you like to keep your code simple and clean!
+OurPy ist ein Python-Modul, das verschiedene Dienstprogramme für Konfigurationsmanagement, Threading, Systeminformationen, JSON-Dateiverarbeitung und Netzwerkoperationen bereitstellt.
 
-```
-import ourpy
+## Funktionen
 
-data = {
-    "Server": {
-        "Version": "1.0"
-    }
-}
+- **Konfigurationsmanagement:** Einfacher Zugriff auf Modulversion, Autor und Dokumentations-URL.
+- **Threading:** Ausführen von Jobs in separaten Threads.
+- **Systemoperationen:** Konsole löschen, Verzögerungen verwalten und aktuelle Zeit abrufen.
+- **JSON-Verarbeitung:** Laden und Speichern von JSON-Daten.
+- **Systeminformationen:** Abrufen von Betriebssystem-, Versions- und Architekturdetails.
+- **Timing:** Starten und Abrufen von Timern für Leistungsbewertungen.
+- **Netzwerkoperationen:** Entdecken von Online-Geräten im lokalen Netzwerk und Auflösen von Hostnamen.
 
-def job():
-    x = 0
-    while x < 10:
-        print(x)
-        ourpy.delay(1)
-        
+## Installation
 
-ourpy.clear()
-print(ourpy.showconfig())
-print(ourpy.myinfo())
-timer = ourpy.start_timer()
-ourpy.delay(3.34)
-print(str(ourpy.get_timer(timer)).replace(".", ","), "Seconds")
-ourpy.save_json(data, "test.json")
-my_data = ourpy.load_json("test.json")
-my_data["Server"]["Version"] = "1.1"
-my_data["Server"]["Message"] = "Hello from Ourpy!"
-ourpy.save_json(my_data, "test.json")
-ourpy.start_in_thread(job=job)
-print(ourpy.mytime())
-print(ourpy.justtime())
-print(ourpy.get_online_devices())
+Klone das Repository auf deinen lokalen Rechner:
+
+```sh
+git clone https://github.com/harimtim/OurPy.git
 ```

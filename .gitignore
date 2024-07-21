@@ -1,3 +1,5 @@
 /ourpy
 /dist
 /ourpy.egg-info
+*.toml
+*.txt

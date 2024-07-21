@@ -17,6 +17,6 @@ OurPy ist ein Python-Modul, das verschiedene Dienstprogramme für Konfigurations
 
 Klone das Repository auf deinen lokalen Rechner:
 
-```sh
-git clone https://github.com/harimtim/OurPy.git
+```py
+pip install ourpy
 ```

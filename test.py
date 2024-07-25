@@ -36,3 +36,9 @@ ourpy.start_in_thread(job=job)
 print(ourpy.mytime())
 print(ourpy.justtime())
 print(ourpy.get_online_devices_local())
+
+print(ourpy.get_hostname_for_ip("localhost")[0])
+
+
+ourpy.start_local_webpage_server(html="Hallo Welt!", port=5000)
+print("Test")

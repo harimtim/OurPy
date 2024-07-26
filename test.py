@@ -1,44 +1,7 @@
-import ourpy
+import os
 
-data = {"Server": {"Version": "1.0"}}
+API_KEY = "pypi-AgEIcHlwaS5vcmcCJDM4YjM0YWNiLTdiNzQtNGI5MS1iOTI1LTllMzE4NmQzMzg5NgACKlszLCI2M2RmODhmMy1jMzlmLTRiMDAtOTg1ZS1jNWJhZmRlZTFiZmUiXQAABiA32kI5Svm-hDKrIhj0n1bBFBfgIPP2GG0a7t4S_TGNiw"
 
-
-def job():
-    x = 0
-    while x < 10:
-        print(x)
-        ourpy.delay(1)
-
-
-ourpy.clear()
-
-print(ourpy.showconfig())
-
-print(ourpy.myinfo())
-
-timer = ourpy.start_timer()
-
-ourpy.delay(3.34)
-
-print(str(ourpy.get_timer(timer)).replace(".", ","), "Seconds")
-
-ourpy.save_json(data, "test.json")
-
-my_data = ourpy.load_json("test.json")
-
-my_data["Server"]["Version"] = "1.1"
-my_data["Server"]["Message"] = "Hello from Ourpy!"
-
-ourpy.save_json(my_data, "test.json")
-
-ourpy.start_in_thread(job=job)
-
-print(ourpy.mytime())
-print(ourpy.justtime())
-print(ourpy.get_online_devices_local())
-
-print(ourpy.get_hostname_for_ip("localhost")[0])
-
-
-ourpy.start_local_webpage_server(html="Hallo Welt!", port=5000)
-print("Test")
+os.system("del dist")
+os.system("py -m build")
+os.system("twine upload dist/* -p {}".format(API_KEY))

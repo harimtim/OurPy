@@ -3,3 +3,5 @@
 /ourpy.egg-info
 pyproject.toml
 requirements.txt
+test.py
+test.json
